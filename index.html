@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NESMP Server</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0f0c29;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://cdn.pixabay.com/photo/2021/03/09/12/36/dots-6079045_960_720.jpg') repeat;
+      background-size: 400% 400%;
+      animation: moveBackground 20s linear infinite;
+      z-index: -1;
+      opacity: 0.1;
+    }
+    @keyframes moveBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 12, 41, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid #00ffe1;
+    }
+    header h1 {
+      color: #00ffe1;
+      font-size: 1.8rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+    nav a {
+      margin-left: 2rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #00ffe1;
+    }
+    .hero {
+      height: 100vh;
+      background: radial-gradient(circle at center, rgba(0,255,225,0.1), transparent);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+      position: relative;
+    }
+    .hero h2 {
+      font-size: 3.5rem;
+      color: #00ffe1;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 15px #00ffe1;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      color: #eee;
+      backdrop-filter: blur(5px);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+    .section {
+      padding: 6rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 16px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 0 20px rgba(0, 255, 225, 0.1);
+      margin-top: 3rem;
+    }
+    .section h3 {
+      color: #00ffe1;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .section ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 1.1rem;
+    }
+    .section ul li::before {
+      content: '✔';
+      margin-right: 10px;
+      color: #00ffe1;
+    }
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 0.85rem 2.2rem;
+      border: 2px solid #00ffe1;
+      color: #00ffe1;
+      background: transparent;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #00ffe1;
+      color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffe1;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #111;
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      .section h3 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NESMP</h1>
+    <nav>
+      <a href="#rules">Rules</a>
+      <a href="#join">Join</a>
+    </nav>
+  </header>  <section class="hero" data-aos="fade-in">
+    <h2>Welcome to NESMP</h2>
+    <p>Server IP: nesmp.skyyshop.my.id:19132</p>
+    <p id="status">Checking server status...</p>
+  </section>  <section class="section" id="rules" data-aos="fade-up">
+    <h3>Peraturan Server</h3>
+    <ul>
+      <li>Dilarang griefing & hacking</li>
+      <li>Tidak toxic, SARA atau spam</li>
+      <li>Hormati sesama pemain dan admin</li>
+      <li>Gunakan common sense</li>
+    </ul>
+  </section>  <section class="section" id="join" data-aos="fade-up">
+    <h3>Bergabung dengan Komunitas</h3>
+    <div class="buttons">
+      <a class="btn" href="https://chat.whatsapp.com/K00wjCIKRhE7VFj79rZ7fn" target="_blank">WhatsApp</a>
+      <a class="btn" href="https://discord.gg/your-discord-link" target="_blank">Discord</a>
+    </div>
+  </section>  <footer>
+    &copy; 2025 NESMP Minecraft Server
+  </footer>  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/16/audio_94482b7ae6.mp3?filename=ambient-futuristic-technology-145160.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>AOS.init();</script>  <script>
+    async function checkServer() {
+      try {
+        const res = await fetch('https://api.mcstatus.io/v2/status/bedrock/nesmp.skyyshop.my.id:19132');
+        const data = await res.json();
+        document.getElementById("status").innerText =
+          data.online ? `Online: ${data.players.online} / ${data.players.max}` : 'Server Offline';
+      } catch {
+        document.getElementById("status").innerText = 'Gagal memuat status.';
+      }
+    }
+    checkServer();
+    setInterval(checkServer, 60000);
+  </script></body>
+</html>
