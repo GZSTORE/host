@@ -1,7 +1,7 @@
 // Function to check server status and update the display
 async function checkServer() {
   try {
-    const res = await fetch('https://api.mcstatus.io/v2/status/bedrock/nesmp.skyyshop.my.id:19132');
+    const res = await fetch('https://api.mcstatus.io/v2/status/bedrock/isi ip server mu');
     const data = await res.json();
     const statusElement = document.getElementById("status");
 
