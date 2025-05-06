@@ -161,7 +161,7 @@
       <a href="#join">Join</a>
     </nav>
   </header>  <section class="hero" data-aos="fade-in">
-    <h2>Welcome to NESMP</h2>
+    <h2>Welcome to NexTarSMP</h2>
     <p>Server IP: </p>
     <p id="status">Checking server status...</p>
   </section>  <section class="section" id="rules" data-aos="fade-up">
@@ -186,7 +186,7 @@
   </audio>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>AOS.init();</script>  <script>
     async function checkServer() {
       try {
-        const res = await fetch('https://api.mcstatus.io/v2/status/bedrock/nesmp.skyyshop.my.id:19132');
+        const res = await fetch('https://api.mcstatus.io/v2/status/bedrock/isi ip servermu');
         const data = await res.json();
         document.getElementById("status").innerText =
           data.online ? `Online: ${data.players.online} / ${data.players.max}` : 'Server Offline';
